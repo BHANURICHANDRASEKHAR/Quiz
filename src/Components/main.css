@@ -1,0 +1,16 @@
+.home__page {
+    background-color: red;
+    height: 700px;
+    color: white !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background:#192024;
+}
+
+.content {
+    padding: 10%;
+}
+.laptop img{
+    object-fit: contain;
+    width: 100%;
+}
