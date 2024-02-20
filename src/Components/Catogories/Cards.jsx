@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { imgdata } from './imgdata'
 import { NavLink } from 'react-router-dom'
 import './card.css'
@@ -11,18 +11,17 @@ export default function Cards({carddata}) {
         carddata.map((data,index)=>{
            
             return(
-                <div className='col-sm-4' key={index}>
-                <NavLink to={`/quiz/${data.name}`}><div className='card' >
-                <img className='card-img-top' src={imgdata[index]} alt={data.title}/>
-                <div className='card-body'>
-                <h5 className='card-title'>{data.name}</h5>
-               
+                <div className='col-sm-4  ' style={{height:'250px'}} key={index} >
+                <NavLink to={`/quiz/${data.name}`}><div className='card mb-2' style={{backgroundImage:`url(${imgdata[index]})`,backgroundPosition:'center',height:'100%'}}>
+                <div className='card-body' >
+                <h5 className='card-title text-block' >{data.name}</h5>
                 </div>
                 </div></NavLink>
                 </div>
             )
         })
     }
+
     </div>
     </div>
   )

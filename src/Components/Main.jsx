@@ -39,7 +39,7 @@ const Part1=()=>{
   <button className='btn btn-outline-success rounded-pill text-white mt-4'>Take A Quiz</button>
   </div>
 
-  <div className='col-sm-6 laptop ' data-aos='fade-up' data-aos-delay='1200' ><img src={computer} alt='laptop'/></div>
+  <div className='col-sm-6 laptop' data-aos='fade-up' data-aos-delay='1200' ><img src={computer} alt='laptop'/></div>
   </div>
   </div>)
 }

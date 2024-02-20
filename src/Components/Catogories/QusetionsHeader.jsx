@@ -3,7 +3,7 @@ import {Popconfirm} from 'antd'
 import './card.css'
 export default function QusetionsHeader({listofquestions,type}) {
   const [Questionnumber,setQuestionmumber]=useState(1)
-  console.log(listofquestions)
+  
   return (
     <div className='container' style={{background:'white'}}>
     <div className='row'>
@@ -71,8 +71,16 @@ return(
 }
 
 const Submit=()=>{
-function confirm(){
-console.log('hi')
+async function confirm(){
+await fetch('https://quiz-app-d25cf-default-rtdb.firebaseio.com/user.json',{
+  method:'POST',
+  headers:{
+    'Content-Type':'application/json'
+  },
+  body:JSON.stringify({
+name:'chandu1'
+  })
+})
   }
   return(
     <Popconfirm
