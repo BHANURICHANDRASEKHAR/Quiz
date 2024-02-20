@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {Popconfirm} from 'antd'
 import './card.css'
 export default function QusetionsHeader({listofquestions,type}) {
   const [Questionnumber,setQuestionmumber]=useState(1)
@@ -17,15 +18,18 @@ export default function QusetionsHeader({listofquestions,type}) {
     <div className='text-center'> <h2 className='lead after'>Question {Questionnumber}</h2></div>
     <Question listofquestions={listofquestions} qno={Questionnumber}/>
     <NextQuestion Questionnumber={Questionnumber} setQuestionmumber={setQuestionmumber}/>
+    <Submit/>
     </div>
   )
 }
 const Questions=({listofquestions,qno})=>{
  const [selectquestion,setselectquestion]=useState([])
  const [answers,setanswers]=useState([]);
+
  useEffect(()=>{
   listofquestions.length>0&&setselectquestion(listofquestions[qno])
   setanswers(selectquestion.answers)
+
  })
 
   return(
@@ -33,10 +37,10 @@ const Questions=({listofquestions,qno})=>{
     <label className='lead'>{qno}.&ensp;{selectquestion.question}</label><br/>
     {answers &&
       Object.keys(answers).slice(0, 4).map((key) => (
-        <React.Fragment key={key}>
-          <input type='checkbox' className='m-3' value={answers[key]} />
-          {answers[key]}<br/>
-        </React.Fragment>
+       answers[key]!==null && <React.Fragment key={key}>
+       <input type='checkbox' className='m-3' value={answers[key]} />
+       {answers[key]}<br/>
+     </React.Fragment>
       ))}
     
     </div>
@@ -45,10 +49,41 @@ const Questions=({listofquestions,qno})=>{
 }
 const Question =React.memo(Questions)
 const NextQuestion=({Questionnumber,setQuestionmumber})=>{
-  console.log(Questionnumber)
+  const style={
+    display:'none'
+  }
+ 
 return(
-  <div className='d-flex justify-content-end'>
-  <button className='btn btn-outline-primary rounded-pill'>Next Question</button>
+  <div className='d-flex justify-content-end '>
+  <div className='m-4' style={(Questionnumber==1)?style:null}>  <button className='btn btn-outline-primary rounded-pill' onClick={()=>{
+    Questionnumber>1&&setQuestionmumber(Questionnumber-1)
+  }} 
+  >Previous Question</button>
+  </div>
+
+  <div className='m-4' style={(Questionnumber==10)?style:null}> <button className='btn btn-outline-primary rounded-pill' 
+  onClick={()=>{
+    Questionnumber<10&&setQuestionmumber(Questionnumber+1)
+  }} >
+  Next Question</button></div>
   </div>
 )
+}
+
+const Submit=()=>{
+function confirm(){
+console.log('hi')
+  }
+  return(
+    <Popconfirm
+    title="Submit The Answers"
+    description="Are you sure to Submit "
+    onConfirm={confirm}
+  
+    okText="Yes"
+    cancelText="No"
+  >
+
+    <button className='btn btn-outline-success rounded-pill'>Submit Answers </button>  </Popconfirm>
+  )
 }
