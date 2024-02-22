@@ -1,5 +1,5 @@
 import React,{ useState,useEffect } from 'react'
-
+import {ToastContainer} from 'react-toastify'
 import './App.css'
 import Main from './Components/Main'
 import Navbar from './Components/Navbar/Narbar'
@@ -14,6 +14,7 @@ function App() {
   return (
     <React.Fragment>
      <Rout/>
+     <ToastContainer/>
     </React.Fragment>
   )
 }

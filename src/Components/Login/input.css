@@ -1,0 +1,20 @@
+.inputs{
+    width: calc(100% - 50%);
+}
+.signup-div{
+    display: flex;
+    background-color: transparent;
+    justify-content:center;
+    align-items: center;
+   
+}
+
+@media (max-width:600px) {
+    .imgdelete{
+        display: none;
+    }
+    .center-div{
+        margin-left:5%;
+      
+    }
+  }
