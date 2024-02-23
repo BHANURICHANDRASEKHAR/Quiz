@@ -3,14 +3,34 @@ import {ToastContainer} from 'react-toastify'
 import './App.css'
 import Main from './Components/Main'
 import Navbar from './Components/Navbar/Narbar'
-import Rout from './Components/Navbar/Rout'
+import Rout from './Components/Navbar/Rout';
+import { authactions } from '../redux/auth'
+import { useDispatch, useSelector } from 'react-redux';
+import getcookie from './Components/Login/tokenverify'
+import Aos from 'aos'
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch=useDispatch();
+  
+  function loginfunction()
+  {
+   console.log('hi')
+    const token=getcookie();
+    if(token)
+    {
+       dispatch(authactions.login())
+    }
+    else{
+      dispatch(authactions.logout())
+    }
+  }
   useEffect(() => {
-    window.AOS.init({ 
+   Aos.init({ 
       duration: 2000
     });
   });
+  useEffect(()=>{
+    loginfunction();
+},[])
   return (
     <React.Fragment>
      <Rout/>

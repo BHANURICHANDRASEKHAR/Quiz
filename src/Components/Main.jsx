@@ -3,11 +3,12 @@ import './main.css'
 import computer from '../assets/laptop.png'
 import { Typewriter } from 'react-simple-typewriter'
 import Group from './Catogories/Group'
+import ChooseMain from './Catogories/Choose/ChooseMain'
 export default function Main() {
   return (
     <React.Fragment>
     <Part1/>
-    <Group/>
+    <ChooseMain/>
     </React.Fragment>
   ) 
 }

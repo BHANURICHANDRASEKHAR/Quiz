@@ -3,7 +3,7 @@ import { Route,Routes } from 'react-router-dom'
 import Main from '../Main'
 import Quiz from '../Quiz'
 import Navbar from './Narbar'
-import QuizQuestions from '../Catogories/QuizQuestions'
+import QuizQuestion from '../Catogories/Choose/QuizQuestions/QuizQuestion'
 import Signup from '../Login/Signup'
 import Login from '../Login/Login'
 export default function Rout() {
@@ -16,7 +16,7 @@ export default function Rout() {
       <Route path='/quiz' element={<Quiz/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/quiz/:type' element={<QuizQuestions/>}/>
+      <Route path='/quiz/:type' element={<QuizQuestion/>}/>
     </Routes></React.Fragment>
   )
 }

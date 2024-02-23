@@ -8,7 +8,15 @@
     align-items: center;
    
 }
-
+.loginpage{
+    height: 100vh;
+    background-color: white;
+}
+.imglogin{
+    width: 100%;
+    height: calc(100vh - 30vh);
+    object-fit: contain;
+}
 @media (max-width:600px) {
     .imgdelete{
         display: none;

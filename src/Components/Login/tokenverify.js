@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-export function getcookie()
+export default function getcookie()
 {
   try{
     const token = Cookies.get('usertoken');
@@ -7,6 +7,11 @@ export function getcookie()
   } 
   catch(e)
   {
-    console.log('no token is present')
+    return false
+    
   }
+}
+export const clearcookie=()=>
+{
+  Cookies.remove('usertoken');
 }

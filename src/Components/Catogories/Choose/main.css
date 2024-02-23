@@ -1,0 +1,39 @@
+.parent{
+    height:fit-content;
+    background-color:  #e4fdf2;
+}
+.imagebackground
+{
+    background-size: contain;
+    background-position: center;
+  background-repeat: no-repeat;
+  height:200px;
+
+}
+.card-parent{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:7px;
+    text-transform: capitalize;
+
+}
+.content-text{
+    padding:100px;
+   
+}   
+.card-children{
+    background-color: #fbfbfbe8;
+    border-radius: 2px;
+    cursor: pointer;
+    color: black !important;
+}
+li{
+    cursor: pointer;
+}
+@media (max-width:800px) {
+    .card-parent{
+        grid-template-columns: repeat(3,1fr);
+        gap:7px;
+        text-transform: capitalize;
+    }
+}

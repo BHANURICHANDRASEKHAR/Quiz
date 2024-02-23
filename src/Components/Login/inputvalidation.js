@@ -27,5 +27,17 @@ export default function signupvalidation(data,setError)
  
 return true;
 }
-
+export function loginvalidation(data,setError)
+{
+  if(data.email.trim()=='' || data.password.trim()=='')
+  {
+    setError('Please fill all the fields');
+    return false;
+  }
+  if (!validateEmail(data.email)) {
+    setError('Email is not valid!')
+    return false
+  }
+  return true;
+}
   

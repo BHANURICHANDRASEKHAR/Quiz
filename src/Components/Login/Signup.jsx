@@ -1,18 +1,18 @@
 import React, { useState,useRef } from 'react'
-import GoogleButton1 from './GoogleButton1';
 import signupvalidation from './inputvalidation'
 import {toast,ToastContainer} from 'react-toastify'
 import { toastsuccess,toasterror } from '../../toastify';
+import useAuth from '../userHooks/useAuth';
 import { NavLink } from 'react-router-dom';
 import Textfield from './Textfield';
+import Loader from '../../../Loader';
 import './input.css'
 import signup from  '../../assets/sign_back.jpg'
 export default function Signup() {
-
   return (
     <div className='container mt-4 ' >
     <div className='row '>
-    <div className='col-sm imgdelete' ><img src={signup}/></div>
+    <div className='col-sm imgdelete' ><img  src={signup}/></div>
     <div className='col-sm center-div'><InputsFeilds/></div>
     </div>
     <ToastContainer/>
@@ -20,7 +20,9 @@ export default function Signup() {
   )
 }
 function InputsFeilds(){
+  const [signup]=useAuth();
     const checkbox=useRef();
+    const [loader,setloader]=useState(false)
     const [error,setError]=useState('')
     const [userdata,setuserdata]=useState({
         name:'',
@@ -38,6 +40,9 @@ function InputsFeilds(){
         if(!data)
         {
           toasterror(toast,error)
+        }
+        else{
+          signup(userdata,setloader)
         }
        }
         else{
@@ -63,9 +68,8 @@ function InputsFeilds(){
         </div>
         <hr/>
         </form>
+      {loader && <Loader/>}
       
-       <p className='lead text-center'>Or Register With</p>
-        <div className='m-5'><GoogleButton1/></div>
         <p className='lead m-5'>Already a member ?<span style={{color:'forestgreen'}}><NavLink to='/login'>Login</NavLink></span></p>
         </React.Fragment>)
 }
