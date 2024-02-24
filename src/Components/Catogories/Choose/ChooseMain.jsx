@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './main.css'
 // react icons links
-import  {type} from '../../../reacticons'
+import  {typeofdata} from '../../../reacticons'
 import {gettypecard} from './getcardsdata'
 import {NavLink} from 'react-router-dom'
 export default function ChooseMain() {
 
   return (
-    <div className='container-fluid parent '>
+    <div className='container-fluid parent ' id='quiz'  data-aos-delay='1200'>
     <div className='row' style={{textAlign:'center'}}><h3 className='lead display-6 mt-5' >Our Top Topics</h3>
     <p className='p-3'>Test your skills with our top topics with a variaty of questions set for beginners and seniors alike!</p>
    </div>
@@ -18,11 +18,11 @@ export default function ChooseMain() {
   const Typecards=()=>{
     const [cardsdata,setcardsdata]=useState([])
     useEffect(()=>{
-      setcardsdata(type)
+      setcardsdata(typeofdata)
     },[])
     return(
-      <div className='container'>
-      <div className='row'>
+      <div className='container' >
+      <div className='row pt-5'>
       <div className='col-sm-8  card-parent '>
       {
         cardsdata.length>0 && cardsdata.map((items)=>{
@@ -40,7 +40,7 @@ export default function ChooseMain() {
         })
       }
       </div>
-      <div className='col-sm-4 content-text' >
+      <div className='col-sm-4 content-text text-center' >
       <h4 className=' mt-4 p-2' style={{fontWeight:'500'}}>Choose what you want?</h4>
       <p className=' p-2'> you want to learn coding, aptitude or check interview experience just Choose from the left</p>
       </div>

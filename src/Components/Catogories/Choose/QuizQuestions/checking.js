@@ -23,12 +23,13 @@ export function wronganswerscheck(list,id,item)
 
 for(let i=0;i<list.length;i++)
 {
-  if(list[i].id===id)
+  
+  if(list[i].id==id)
   {
     if(list[i].item==item)
     {
       console.log(item)
-      return true
+      return true;
     }
     else
     {

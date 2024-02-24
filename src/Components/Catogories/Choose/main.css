@@ -1,6 +1,14 @@
 .parent{
     height:fit-content;
-    background-color:  #e4fdf2;
+    background: hsla(154, 86%, 94%, 1);
+
+    background: radial-gradient(circle, hsla(154, 86%, 94%, 1) 71%, hsla(0, 0%, 100%, 1) 100%);
+    
+    background: -moz-radial-gradient(circle, hsla(154, 86%, 94%, 1) 71%, hsla(0, 0%, 100%, 1) 100%);
+    
+    background: -webkit-radial-gradient(circle, hsla(154, 86%, 94%, 1) 71%, hsla(0, 0%, 100%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E4FDF2", endColorstr="#FFFFFF", GradientType=1 );
 }
 .imagebackground
 {
@@ -14,8 +22,13 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap:7px;
-    text-transform: capitalize;
 
+    text-transform: capitalize;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 .content-text{
     padding:100px;
@@ -26,7 +39,9 @@
     border-radius: 2px;
     cursor: pointer;
     color: black !important;
+    transition: 2s linear;
 }
+
 li{
     cursor: pointer;
 }
@@ -36,4 +51,29 @@ li{
         gap:7px;
         text-transform: capitalize;
     }
+}
+.answers{
+    font-family: 'Times New Roman';
+    user-select: none;
+
+}
+.answers h5{
+    font-weight: 500;
+    font-size: 24px;
+}
+.answers label{
+    line-height: 30px;
+    line-clamp:inherit;
+    margin: 10px;
+    letter-spacing: 1px;
+}
+.answers span{
+    font-weight: 550;
+}
+.questionsandanswer{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.pageparent{
+    display: flex;
+    justify-content: center;
 }

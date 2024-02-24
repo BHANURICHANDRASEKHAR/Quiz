@@ -6,7 +6,8 @@ import { TbMathSymbols } from "react-icons/tb";
 import { FaDatabase } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa6";
-export  const type=[
+import { BsFillPersonCheckFill } from "react-icons/bs";
+export  const typeofdata=[
     {
         id:1,
         name:'java script',
@@ -84,3 +85,51 @@ export const problem_list=[
     { id: 29, name: 'Digit Count' },
     { id: 30, name: 'Multiplication Table' }
   ]
+  export const mostasked=[
+    {
+        id:4,
+        name:'hr',
+        type:'hr',
+        logo:BsFillPersonCheckFill
+    }, {
+        id:5,
+        name:'dbms',
+        type:'dbms',
+        logo:FaDatabase
+    }
+    , {
+        id:6,
+        name:'react',
+        type:'react',
+        logo:FaReact
+    }, {
+        id:7,
+        name:'python',
+        type:'python',
+        logo:FaPython
+    }, {
+        id:8,
+        name:'java',
+        type:'java',
+        logo:FaJava
+    },
+    {
+        id:1,
+        name:'java script',
+        type:'js',
+        logo:IoLogoJavascript
+    },
+    {
+        id:3,
+        name:'Html And CSS',
+        type:'html',
+        logo:IoLogoHtml5
+    },
+    {
+        id:2,
+        name:'data structures ',
+        type:'ds',
+        logo:PiGraph
+    },
+   
+]

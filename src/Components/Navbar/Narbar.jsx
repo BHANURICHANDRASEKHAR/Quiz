@@ -12,11 +12,11 @@ export default function Navbar() {
   }
   return (
    
-        <div className="nav container-fluid  d-flex ">
+        <div className="nav container-fluid  d-flex  ">
           <input type="checkbox" id="nav-check" />
 
           <div className="nav-header">
-      <div className="nav-title text-white">Quiz App</div>
+      <div className="nav-title text-white">Skill Sync</div>
        </div>
           <div className="nav-btn">
             <label htmlFor="nav-check">
@@ -26,10 +26,9 @@ export default function Navbar() {
             </label>
           </div>
 
-          <div className="nav-links1">
+          <div className="nav-links1 ">
             <NavLink to="/"> Home</NavLink>
-            <NavLink to="/account"> Account</NavLink>
-            <NavLink to="/quiz">Quiz</NavLink>
+           
             {
               authslice.auth ? (
                 <Popconfirm

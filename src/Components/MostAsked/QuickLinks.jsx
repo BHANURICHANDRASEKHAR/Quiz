@@ -13,7 +13,7 @@ export default function QuickLinks({typedata,type}) {
               background:items.type==typedata && 'lightgray' 
             }
             return(
-                <NavLink  key={index} to={`/quiz/${items.type}`}><h6 style={style}  className='p-2 text-success quicklinks'>{items.name}</h6></NavLink>
+                <NavLink  key={index} to={`/interview-questions/${items.type}`}><h6 style={style}  className='p-2 text-success quicklinks'>{items.name}</h6></NavLink>
             )
         })
     }

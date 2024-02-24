@@ -8,6 +8,7 @@ import { authactions } from '../redux/auth'
 import { useDispatch, useSelector } from 'react-redux';
 import getcookie from './Components/Login/tokenverify'
 import Aos from 'aos'
+import Footer from './Footer'
 function App() {
   const dispatch=useDispatch();
   
@@ -34,6 +35,7 @@ function App() {
   return (
     <React.Fragment>
      <Rout/>
+     <Footer/>
      <ToastContainer/>
     </React.Fragment>
   )

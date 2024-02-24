@@ -5,6 +5,7 @@ import Loader from '../../../../../Loader';
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import { RxCrossCircled } from "react-icons/rx";
 import './questions.css';
+import {typeofdata} from '../../../../reacticons'
 import {check,wronganswerscheck} from './checking'
 
 import QuickLinks from './QuickLinks';
@@ -30,7 +31,7 @@ export default function QuizQuestion() {
         <Questions questionsdata={carddata}/>
         </div>
         <div className='col-sm-1'></div>
-        <div className='col-sm-3 linkscard mt-5' ><QuickLinks typedata={type}/></div>
+        <div className='col-sm-3 linkscard mt-5' ><QuickLinks typedata={type} type={typeofdata} /></div>
         </div>
     }
     </div>
@@ -99,7 +100,7 @@ const Questions=({questionsdata})=>{
                       correctanswer.status && answer === item && check(correctanswers, id, answer) && (
                         <span className='text-success' style={{fontSize:'25px'}}><IoMdCheckmarkCircle/></span>
                   )}
-                  { ( wronganswers.length > 0 && wronganswerscheck(wronganswers,id,item) ) &&<span className='text-danger' style={{fontSize:'25px'}} ><RxCrossCircled/></span> }
+                  {( wronganswers.length > 0 && wronganswerscheck(wronganswers,id,item) ) &&<span className='text-danger' style={{fontSize:'25px'}} ><RxCrossCircled/></span>}
                   </li>
                   ))
                 }
