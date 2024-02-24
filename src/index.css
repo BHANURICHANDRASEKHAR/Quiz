@@ -57,3 +57,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-he */
+.google 
+{
+  height: 40px;
+  width:40px;
+  border-radius: 50%;
+  background-color: lightgray;
+}
+.google img{
+  height: inherit;
+}

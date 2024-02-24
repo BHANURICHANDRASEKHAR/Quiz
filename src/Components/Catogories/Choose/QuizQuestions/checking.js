@@ -1,40 +1,11 @@
-export function check(list,id,option)
-{
- 
-  for (var i = 0; i < list.length; i++)
-  {
-    if(list[i].id===id)
-    {
-      if(list[i].answer===option)
-      {
-        return true
-      }
-      else
-      {
-        return false
-      }
-    }
-  
-  }
-}
-export function wronganswerscheck(list,id,item)
-{
-  console.log(list)
+export function check(list, id, option) {
+  const matchingAnswer = list.find((item) => item.id === id);
 
-for(let i=0;i<list.length;i++)
-{
-  
-  if(list[i].id==id)
-  {
-    if(list[i].item==item)
-    {
-      console.log(item)
-      return true;
-    }
-    else
-    {
-      return false
-    }
-  }
+  return matchingAnswer ? matchingAnswer.answer === option : false;
 }
+
+export function wronganswerscheck(list, id, item) {
+  const matchingItem = list.find((listItem) => listItem.id === id);
+
+  return matchingItem ? matchingItem.item === item : false;
 }

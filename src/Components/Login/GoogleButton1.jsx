@@ -4,6 +4,7 @@ import {auth,googleauthprovider} from '../../firebase/firebase'
 import { signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
 import useAuth from '../userHooks/useAuth';
+import google from '../../assets/google.png'
 import  Cookies  from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 export default function GoogleButton1() {
@@ -12,22 +13,24 @@ export default function GoogleButton1() {
     const navigate=useNavigate()
     const handle = async () => {
         try {
-            setLoading(true);
+           
             const result = await signInWithPopup(auth, googleauthprovider);
             Cookies.set('usertoken',result.user.accessToken)
-            loginfunction()
-            navigate('/')
+            console.log(result)
+             loginfunction();
+             navigate('/')
         } catch (err) {
+           
             console.error("Error during sign-in:", err.message);
         } finally {
-            setLoading(false);
+            navigate('/')
         }
     };
     
     return (
-        <div>
-            <GoogleButton onClick={handle} disabled={loading} />
-            {loading && <p>Loading...</p>}
+        <div className='google '>
+            <img src={google}  onClick={handle} disabled={loading} />
+           
         </div>
     );
     

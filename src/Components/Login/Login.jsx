@@ -5,9 +5,11 @@ import signup from '../../assets/sign.jpg'
 import Textfield from './Textfield';
 import useAuth from '../userHooks/useAuth';
 import { toasterror } from '../../toastify';
+import GoogleButton1 from './GoogleButton1';
 import { loginvalidation } from './inputvalidation';
 import './input.css'
 import Loader from '../../../Loader';
+import GoogleButton from 'react-google-button';
 export default function Login() {
  
   return (
@@ -47,7 +49,11 @@ const Textfields=()=>{
     <div className='form-group '><button  className='btn btn-outline-success m-4 w-50 rounded-pill' onClick={submit}>Submit</button>
     {loader&&<Loader/>}
     </div>
-    <p className='lead ml-5 mt-2  '>Don't have Account<NavLink to='/signup'>Sign Up</NavLink></p>
+   <div style={{marginLeft:'40px'}} className='p-2'>
+   <p className='lead' >Or Signin With</p>
+   <div  style={{marginLeft:'60px'}}><GoogleButton1/></div>
+   <p className='lead mt-2 '>Dont have a Acoount ?<span style={{color:'forestgreen'}}><NavLink to='/signup'>Signup</NavLink></span></p>
+   </div>
     </div>
     )
 }

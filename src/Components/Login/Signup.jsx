@@ -8,6 +8,7 @@ import Textfield from './Textfield';
 import Loader from '../../../Loader';
 import './input.css'
 import signup from  '../../assets/sign_back.jpg'
+import GoogleButton1 from './GoogleButton1';
 export default function Signup() {
   return (
     <div className='container mt-4 ' >
@@ -69,7 +70,10 @@ function InputsFeilds(){
         <hr/>
         </form>
       {loader && <Loader/>}
-      
-        <p className='lead m-5'>Already a member ?<span style={{color:'forestgreen'}}><NavLink to='/login'>Login</NavLink></span></p>
+      <div style={{marginLeft:'40px'}} className='p-2'>
+   <p className='lead' >Or Register With</p>
+   <div  style={{marginLeft:'60px'}}><GoogleButton1/></div>
+   <p className='lead mt-2 '>Already Have a Account ?<span style={{color:'forestgreen'}}><NavLink to='/login'>Login</NavLink></span></p>
+   </div>
         </React.Fragment>)
 }
