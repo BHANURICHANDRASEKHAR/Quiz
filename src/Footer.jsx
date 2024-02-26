@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <React.Fragment>
   
- <footer className="footer-distributed  container mt-5">
+ <footer className="footer-distributed  footer-background container mt-5">
  
        <div className="footer-left">
          <p className="footer-links">

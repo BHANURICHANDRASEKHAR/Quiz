@@ -44,7 +44,7 @@ const Questions = ({ questionsData }) => {
   const [correctAnswers, setCorrectAnswers] = useState([]);
   const [wrongAnswers, setWrongAnswers] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState({ id: '', status: '' });
-  const [numberOfPages, setNumberOfPages] = useState(Math.floor(questionsData.length / 5));
+  const [numberOfPages, setNumberOfPages] = useState(Math.floor(questionsData.length / 10));
   const [pageNumber, setPageNumber] = useState(1);
 
   const check1 = (item, answer, id) => {
@@ -67,7 +67,7 @@ const Questions = ({ questionsData }) => {
     <div className='m-4'>
       <div className='row'>
         <div className='col-sm'>
-          {questionsData.slice((pageNumber - 1) * 5, 5 * pageNumber).map((data, index) => (
+          {questionsData.slice((pageNumber - 1) * numberOfPages, numberOfPages * pageNumber).map((data, index) => (
             <div className='m-1' key={data.id || index}>
               <label className='m-2'>
                 {index + 1}. {data.question}
