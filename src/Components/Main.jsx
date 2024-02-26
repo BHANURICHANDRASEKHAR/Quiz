@@ -22,7 +22,7 @@ const TypingEffect=()=>
         <span style={{ color: 'green', fontWeight: 'bold' }}>
        
         <Typewriter
-          words={['Devop!', 'Python', 'Code', 'Java Script!']}
+          words={['Java!', 'Python', 'React', 'Js!']}
           loop={Infinity}
           cursor
           cursorStyle='|'

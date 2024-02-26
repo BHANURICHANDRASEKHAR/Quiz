@@ -9,6 +9,7 @@
 
 .content {
     padding: 10%;
+    width: 100%;
 }
 .laptop img{
     object-fit: contain;
