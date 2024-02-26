@@ -87,6 +87,9 @@ const Questions = ({ questionsData }) => {
                     wrongAnswers={wrongAnswers}
                   />
                 ))}
+                <div className='d-flex'><span className='text-success' style={{fontSize:'20px'}}>Answer </span>{check(correctAnswers, data.id, data.answer)&&<div data-aos='fade-down'><li > <span style={{fontSize:'20px'}}>::({data.answer})</span> </li>
+                <li style={{lineHeight:'24px'}}><span className='text-success '>Explanation</span> :{data.explanation}</li></div>
+                }</div>
               </ul>
             </div>
           ))}
@@ -100,7 +103,7 @@ const Questions = ({ questionsData }) => {
 const QuestionItem = ({ item, answer, answerList, explanation, id, correctAnswer, check1, correctAnswers, wrongAnswers }) => (
   <li key={`${id}-${item}`} className='m-2' onClick={() => check1(item, answer, id)}>
     {`(${item})`} {answerList[item]}{' '}
-    {correctAnswer.status && answer === item && check(correctAnswers, id, answer) ? (
+    {answer === item && check(correctAnswers, id, answer) ? (
       <CheckMark />
     ) : wrongAnswers.length > 0 && wronganswerscheck(wrongAnswers, id, item) ? (
       <CrossMark />

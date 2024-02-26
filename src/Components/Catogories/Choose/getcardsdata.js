@@ -5,7 +5,7 @@ export function gettypecard(link,setcardsdata,setloader) {
   var type={
     type:link
   }
-  const data = axios.post('http://localhost:3000/offers',type);
+  const data = axios.post('https://quiz-app-irbr.onrender.com/offers',type);
   
   data.then((res) => {
     if (res.data.status === 'Success') {

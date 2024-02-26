@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './main.css'
 import computer from '../assets/laptop.png'
 import { Typewriter } from 'react-simple-typewriter'
@@ -6,11 +6,13 @@ import Group from './Catogories/Group'
 import MostAskedMain from './MostAsked/MostAskedMain'
 import ChooseMain from './Catogories/Choose/ChooseMain'
 export default function Main() {
+
   return (
     <React.Fragment>
     <Part1/>
     <ChooseMain/>
     <MostAskedMain/>
+   
     </React.Fragment>
   ) 
 }

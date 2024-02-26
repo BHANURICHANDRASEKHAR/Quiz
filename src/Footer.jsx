@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import './footer.css'
-
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <React.Fragment>
@@ -44,9 +45,9 @@ export default function Footer() {
            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
          </p>
  
- 
+     <div className='d-flex'><a href='https://www.linkedin.com/in/bhanuri-chandrasekhar-975988239/' className='m-2 display-6 text-primary' target='_top'><FaLinkedin  /></a> <a href='https://github.com/BHANURICHANDRASEKHAR' target='_top' className='m-2 display-6 '><FaGithub  /></a></div>
        </div>
- 
+
      </footer>
     </React.Fragment>
    )

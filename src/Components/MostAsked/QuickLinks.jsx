@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export default function QuickLinks({typedata,type}) {
     
   return (
-    <div className='container mt-4'>
+    <div className='container mt-4 '>
     <button className='quicklinkbutton'>Quick Links</button>
     {
         type.map((items,index)=>{

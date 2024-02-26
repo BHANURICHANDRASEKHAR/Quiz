@@ -16,7 +16,7 @@ export default function GoogleButton1() {
            
             const result = await signInWithPopup(auth, googleauthprovider);
             Cookies.set('usertoken',result.user.accessToken)
-            console.log(result)
+          
              loginfunction();
              navigate('/')
         } catch (err) {

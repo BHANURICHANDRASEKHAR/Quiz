@@ -1,3 +1,11 @@
 .quesions{
 font-family: 'Times New Roman';
 }
+.question-images{
+    width: 100%;
+    height: 300px;
+    object-fit:scale-down;
+}
+.mostquestions{
+    font-weight: 600;
+}

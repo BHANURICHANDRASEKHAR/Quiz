@@ -13,7 +13,7 @@ export default function useAuth() {
     function signup(data,setloader)
     {
       setloader(true)
-       const res= axios.post('http://localhost:3000/signup',data)
+       const res= axios.post('https://quiz-app-irbr.onrender.com/signup',data)
        res.then(res=>{
         setloader(false)
          if(res.data.status==='Success')
@@ -33,7 +33,7 @@ export default function useAuth() {
    function loginintoaccount(data,setloader)
    {
     setloader(true)
-    const res= axios.post('http://localhost:3000/login',data)
+    const res= axios.post('https://quiz-app-irbr.onrender.com/login',data)
     res.then(res=>{
      setloader(false)
       if(res.data.status==='Success')

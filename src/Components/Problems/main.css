@@ -1,0 +1,16 @@
+.compiler-parent{
+    letter-spacing: 0.9px;
+    line-height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.compiler-parent h6{
+    font-size: 24px;
+}
+.compiler-parent p
+{
+    font-size: 20px;
+}
+.compiler-parent img
+{
+   margin: 10px;
+}
