@@ -127,7 +127,7 @@ const Pages = ({ questionsData, numberOfPages, setPageNumber, pageNumber }) => (
   <div className='row '>
     <hr />
     <div className='col-sm'>
-      <ul className='pagination m-4'>
+      <ul className='pagination mt-4'>
         <li className='page-item'>
           <button className='page-link' onClick={() => pageNumber > 1 && setPageNumber(pageNumber - 1)}>
             Previous
