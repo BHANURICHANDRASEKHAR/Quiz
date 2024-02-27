@@ -67,7 +67,7 @@ const Questions = ({ questionsData }) => {
     <div className='m-4'>
       <div className='row'>
         <div className='col-sm'>
-          {questionsData.slice((pageNumber - 1) * numberOfPages, numberOfPages * pageNumber).map((data, index) => (
+          {questionsData.slice((pageNumber - 1) * 10, 10 * pageNumber).map((data, index) => (
             <div className='m-1' key={data.id || index}>
               <label className='m-2'>
                 {index + 1}. {data.question}
@@ -88,7 +88,7 @@ const Questions = ({ questionsData }) => {
                   />
                 ))}
                 <div className='d-flex'><span className='text-success' style={{fontSize:'20px'}}>Answer </span>{check(correctAnswers, data.id, data.answer)&&<div data-aos='fade-down'><li > <span style={{fontSize:'20px'}}>::({data.answer})</span> </li>
-                <li style={{lineHeight:'24px'}}><span className='text-success '>Explanation</span> :{data.explanation}</li></div>
+                <li style={{lineHeight:'23px',width:'100%'}}><span className='text-success '>Explanation</span> :{data.explanation}</li></div>
                 }</div>
               </ul>
             </div>
@@ -124,7 +124,7 @@ const CrossMark = () => (
 );
 
 const Pages = ({ questionsData, numberOfPages, setPageNumber, pageNumber }) => (
-  <div className='row '>
+  <div >
     <hr />
     <div className='col-sm'>
       <ul className='pagination mt-4'>

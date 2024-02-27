@@ -3,7 +3,7 @@ export function check(list, id, option) {
   {
     const matchingAnswer = list.find((item) => item.id === id);
    
-  return matchingAnswer ? matchingAnswer.answer === option : false;
+   return matchingAnswer ? matchingAnswer.answer === option : false;
   }
   else{
     return false;

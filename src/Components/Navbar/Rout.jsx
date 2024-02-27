@@ -10,6 +10,8 @@ import MostAskedMain from '../MostAsked/MostAskedMain'
 import MostAskedQuestions from '../MostAsked/MostAskedQuestions'
 import ProblemsList from '../Problems/ProblemsList'
 import Problem from '../Problems/Problem'
+import Top100Main from '../Catogories/top100/Top100Main'
+import Code from '../Catogories/top100/Code'
 export default function Rout() {
   return (
     <React.Fragment>
@@ -18,6 +20,8 @@ export default function Rout() {
       <Route path='/' element={<Main/>}/>
       <Route path='/account' element={<Quiz/>}/>
       <Route path='/interview-questions/:type' element={<MostAskedQuestions/>}/>
+      <Route path='/top100' element={<Top100Main/>}/>
+      <Route path='/top100/:code' element={<Code/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/problemlist' element={<ProblemsList/>}/>
       <Route path='/problemlist/:id' element={<Problem/>}/>

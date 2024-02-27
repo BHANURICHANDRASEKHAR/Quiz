@@ -9,21 +9,22 @@ export default function MostAskedMain() {
     setcarddata(mostasked)
   },[])
   return (
-    <div className='container  parent pt-5  '>
-     <div className='row pt-5 text-center'>
-     <h3 className='lead display-6 mt-5 ' >Most Asked Interview Questions with Answers</h3>
-    <p className='p-3'>Test your skills with our top topics with a variaty of questions set for beginners and seniors alike!</p>
-     <div className='col-sm-8'>
-     <div className='card-parent'><Cardsdata carddata={carddata}/></div>
-     </div>
-     <div className='col-sm-4 mt-4 text-center'>
-     <div className='mt-5'><h4>Interview Questions</h4><br/>
-     <p>  From Interview experiences, puzzles, Resume,Technical Interview.
+   <div className='container-fluid mt-5'>
+   <div className='container  parent pt-5  '>
+   <div className='row pt-5 text-center'>
+   <h3 className='lead display-6 mt-5 ' >Most Asked Interview Questions with Answers</h3>
+  <p className='p-3'>Test your skills with our top topics with a variaty of questions set for beginners and seniors alike!</p>
+   <div className='col-sm-8'>
+   <div className='card-parent'><Cardsdata carddata={carddata}/></div>
+   </div>
+   <div className='col-sm-4 mt-4 text-center'>
+   <div className='mt-5'><h4>Interview Questions</h4><br/>
+   <p>  From Interview experiences, puzzles, Resume,Technical Interview.
 
-     Ace everything with PrepInsta</p></div>
-     </div>
-     </div>
-    </div>
+    Ace everything with PrepInsta</p></div>
+   </div>
+   </div>
+  </div></div>
   )
 }
 const Cardsdata=({carddata})=>{

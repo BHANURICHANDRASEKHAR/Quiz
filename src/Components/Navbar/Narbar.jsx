@@ -29,6 +29,7 @@ export default function Navbar() {
           <div className="nav-links1 ">
             <NavLink to="/"> Home</NavLink>
             <NavLink to="/problemlist"> Problems</NavLink>
+            <NavLink to="/top100">Top-100 Problems</NavLink>
             {
               authslice.auth ? (
                 <Popconfirm
