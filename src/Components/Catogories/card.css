@@ -40,20 +40,23 @@
 .after::after {
     content: '___________________________________________________________________';
 }
-.loader{
-    height: 100px;
-    width: 100px;
+/* .loader{
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     background-color: transparent;
     position: absolute;
     top:40%;
     left:48%;
-    border-top:5px solid gray;
+    border-top:3px solid rgb(47, 54, 189);
     transform: translate(-50%,-50%);
     animation: load 10s infinite ease-in-out;
 }
 @keyframes load {
-    100%{
+    from{
         transform:  rotate(360deg);
     }
-}
+    to{
+        transform:  rotate(0deg);
+    }
+} */

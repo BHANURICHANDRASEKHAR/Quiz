@@ -104,7 +104,7 @@
       height: 0px;
     }
     .nav> #nav-check:checked ~ .nav-links1 {
-      height: calc(40vh - 50px);
+      height: calc(60vh - 50px);
      width: calc(30vh - 50px);
     }    
   }

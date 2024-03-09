@@ -11,13 +11,9 @@ export default function Footer() {
     <footer className="footer-distributed  footer-background container mt-5">
  
     <div className="footer-left">
-      <p className="footer-links">
-      <Link to='/interview-questions'>Interview Preparation</Link>
-      <Link to='/account'>Account</Link>
-     
-      </p>
+ 
 
-      <p className="footer-company-name">Quiz © 2023</p>
+      <p className="footer-company-name">Quiz © 2024</p>
     </div>
 
     <div className="footer-center">

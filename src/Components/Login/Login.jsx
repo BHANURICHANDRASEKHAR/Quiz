@@ -14,7 +14,7 @@ export default function Login() {
  
   return (
     <div className='container mt-4  loginpage' >
-    <div className='row '>
+    <div className='row'>
     <div className='col-sm imgdelete'><img src={signup} className='imglogin'/></div>
     <div className='col-sm center-div'><Textfields/> </div>
     </div>
@@ -42,7 +42,7 @@ const Textfields=()=>{
  
   }
   return(
-    <div className='m-5'>
+    <div >
     <h1 className='lead'>Sign In</h1>
     <Textfield label="Email" type="email" action={changehandle} placeholder='Email Address' userdata={data} name='email'/>
     <Textfield label="Password" type="password" action={changehandle} placeholder='password' userdata={data} name='password'/>

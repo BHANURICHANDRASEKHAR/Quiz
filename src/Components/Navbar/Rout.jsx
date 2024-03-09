@@ -12,6 +12,7 @@ import ProblemsList from '../Problems/ProblemsList'
 import Problem from '../Problems/Problem'
 import Top100Main from '../Catogories/top100/Top100Main'
 import Code from '../Catogories/top100/Code'
+import Home from '../Notes/Home'
 export default function Rout() {
   return (
     <React.Fragment>
@@ -19,6 +20,7 @@ export default function Rout() {
      <Routes>
       <Route path='/' element={<Main/>}/>
       <Route path='/account' element={<Quiz/>}/>
+      <Route path='/notes' element={<Home/>}/>
       <Route path='/interview-questions/:type' element={<MostAskedQuestions/>}/>
       <Route path='/top100' element={<Top100Main/>}/>
       <Route path='/top100/:code' element={<Code/>}/>

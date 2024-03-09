@@ -8,7 +8,7 @@ import Editor from './Editor'
 export default function Code() {
     const {code}=useParams();
     const params=code.split('-')
-   const [data,setdata]=useState('');
+   const [data,setdata]=useState([]);
    const [loader,setloader]=useState(false)
     useEffect(()=>{
     getcodes(params,setdata,setloader)
@@ -45,14 +45,13 @@ const Algorithm=({params})=>{
     {
       data.length > 0 && data.map((items, index) => {
         const { img,algo: { algorithm, steps } } = items;
-        console.log("Log something specific here"); // Add content inside console.log()
      
         return (
           <div className='row mt-3' key={index}>
             <h5>{algorithm}</h5>
             {items.img&&<div className='m-4'><h5>Flowchart</h5><img src={img} className='question-images'/></div>}
              <div>
-             <h5>Algorith:</h5> 
+             <h5>Algorithm:</h5> 
               <ul className='m-2'>
              {steps.map((item, innerIndex) => (
                <li className='p-1' key={innerIndex}>Step:{innerIndex+1}:{item['description']}</li>

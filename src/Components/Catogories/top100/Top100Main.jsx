@@ -22,7 +22,7 @@ const Problems=({data})=>{
     return(
         <div className='container mt-5'>
         <h2>Top 100 Codes</h2>
-        <ul>
+        
      {
         data.map((items, index) => {
             const { id, problem, type } = items;
@@ -35,10 +35,10 @@ const Problems=({data})=>{
                         <Link to={`/top100/${encodeURIComponent(problem)}-${encodeURIComponent(type['java'])}-${id}`}>
                             <span className='btn btn-warning'>{type['java']}</span>
                         </Link>
-                        <Link to={`/top100/${encodeURIComponent(problem)}-${encodeURIComponent(type['python'])}`}>
+                        <Link to={`/top100/${encodeURIComponent(problem)}-${encodeURIComponent(type['python'])}-${id}`}>
                         <span className='btn btn-primary m-3'>{type['python']}</span>
                     </Link>
-                    <Link to={`/top100/${encodeURIComponent(problem)}-${encodeURIComponent(type['python'])}`}>
+                    <Link to={`/top100/${encodeURIComponent(problem)}-${encodeURIComponent(type['cpp'])}-${id}`}>
                     <span className='btn btn-success m-3'>{type['cpp']}</span>
                 </Link>
                     </div>
@@ -46,7 +46,7 @@ const Problems=({data})=>{
             );
         })
      }        
-        </ul>
+        
         </div>
     )
 }
