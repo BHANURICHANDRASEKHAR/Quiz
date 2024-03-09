@@ -25,8 +25,8 @@ const Pdfdata=()=>{
           return (
               <React.Fragment>
               <div className='col-sm-3'>
-              <img src={data.img} className='pdfimgsdata'/>
-              
+            <a href={data.path} download={true}>  <img src={data.img} className='pdfimgsdata'/>
+            </a>
               </div>
               </React.Fragment>
           )
